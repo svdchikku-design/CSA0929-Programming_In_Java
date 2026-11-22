@@ -1,0 +1,7 @@
+CREATE DATABASE IF NOT EXISTS buspass_test;
+USE buspass_test;
+CREATE TABLE IF NOT EXISTS users (id VARCHAR(20) PRIMARY KEY, pwd VARCHAR(40) NOT NULL);
+INSERT IGNORE INTO users VALUES ('admin', 'S3cret!'), ('saai', 'pass123');
+CREATE TABLE IF NOT EXISTS bus_pass (
+  pass_id  VARCHAR(10) PRIMARY KEY, reg_no CHAR(9) NOT NULL, name VARCHAR(60) NOT NULL,
+  route_no INT NOT NULL, amount DOUBLE NOT NULL);
